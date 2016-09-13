@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/addons/p5.sound.min.js"></script>
+    <script src="//toolness.github.io/p5.js-widget/p5-widget.js"></script>
+    <link href="../style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+
+    <h1>Quiz 1a: The difference between function setup() and function draw().</h1>
+
+    <p>1. Update the sketch below to give your canvas a blue background in the setup() function. </p>
+    <p>Next, draw a rectangle that follows your mouse across the canvas. Need a hint? Check out <a href="https://p5js.org/reference/#/p5/mouseX">mouseX</a> and <a href="https://p5js.org/reference/#/p5/mouseY">mouseY.</a> </p> 
+
+<script type="text/p5" data-preview-width="400">function setup() {
+  createCanvas(400, 200);
+}
+function draw() {
+  
+}
+</script>
+
+<p>2. Update the sketch below to give your canvas a blue background in the draw() function.</p>
+
+<p>Next, draw a rectangle that follows your mouse across the canvas. </p>
+
+<script type="text/p5" data-preview-width="400">function setup() {
+  createCanvas(400, 200);
+}
+function draw() {
+
+}
+</script>
+<p> Notice any differences?!</p>
+<br>
+<p>The <font size="5"><b>setup() function</b></font> repeats the code within it's curly brackets only <font size="5"><b>once.</b></font> Since the background is drawn on the canvas only once in this case, this results in the rectangle leaving behind a trail at every location that your mouse travels to.
+<br>
+<p>The <font size="5"><b>draw() function</b></font> repeats the lines of code within its curly brackets <font size="5"><b>constantly</b></font>, which is why the rectangle following your mouse does not leave a trail of rectangles behind.</p>
+
+
+  </body>
+</html>
