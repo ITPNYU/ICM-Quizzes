@@ -1,2 +1,2 @@
-# Ignore log files
+_site/
 .DS_Store
