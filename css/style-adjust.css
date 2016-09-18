@@ -37,3 +37,11 @@ body {
   color: #ed225d;
   text-decoration: none;
 }
+
+.entries h3 {
+  font-weight: 100;
+}
+
+.post h2 {
+  font-weight: 100;
+}
