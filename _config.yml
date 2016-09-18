@@ -7,3 +7,7 @@ baseurl: "/ICM-Quizzes" # the subpath of your site, e.g. /blog/
 # url: "http://ITPNYU.github.io" # the base hostname & protocol for your site
 url: "http://yining1023.github.io"
 markdown: kramdown
+
+permalink: pretty
+
+exclude: ["Gemfile", "Gemfile.lock", "README.md", 'sass', 'watch.sh', 'style.scss']
