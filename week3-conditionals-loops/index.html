@@ -6,8 +6,8 @@ permalink: /week3-conditionals-loops/
 
     <p>1. Consider a grading system where numbers are turned into letters. Fill in the blanks in the following code to complete the boolean expression.</p>
 
-<script type="text/p5" data-preview-width="400">function setup() {
-float grade = random(0, 100);
+<script type="text/p5" data-preview-width="400">
+var grade = random(0, 100);
 
 if (__________) {
   text("Grade: A", 10, 50);
@@ -22,29 +22,55 @@ if (__________) {
 }
 </script>
 
-<p>2. Move a rectangle across a window by incrementing a variable. Start the shape at x coordinate 0 and use an if statement to have it stop at coordinate 100. Rewrite the sketch to use</em> <code>constrain()</code> <em>instead of the <code>if</code> statement. Fill in the missing code.</p>
+<p>2. Move a rectangle across a window by incrementing a variable. Start the shape at x coordinate 0 and use an if statement to have it stop at coordinate 100. Rewrite the sketch to use <code>constrain()</code> instead of the <code>if</code> statement. Fill in the missing code.</p>
 
-<script type="text/p5" data-preview-width="400">function setup() {
-  // Rectangle starts at location x
-  var x = 0;
+<script type="text/p5" data-preview-width="400">
+// Rectangle starts at location x
+var x = 0;
 
-  function setup() {
-    createCanvas(200, 200);
+function setup() {
+  createCanvas(200, 200);
+}
+
+function draw() {
+  background(255);
+  // Display object
+  fill(0);
+  rect(x, 100, 20, 20);
+
+  // Increment x
+  x = x + 1;
+
+  ______________________________________________
+
+  ______________________________________________
+
+  ______________________________________________
+}
+</script>
+
+<p>3. Write a program that implements a simple rollover. In other words, if the mouse is over a rectangle, the rectangle changes color. Here is some code to get you started. (How might you do this for a circle?)</p>
+
+<script type="text/p5" data-preview-width="400">
+var x = 50;
+var y = 50;
+var w = 100;
+var h = 75;
+
+function setup() {
+  createCanvas(200, 200);
+}
+function draw() {
+  background(255);
+
+  stroke(0);
+
+  if (________ && ________ && ________ && ________) {
+    ______________________
+  } _________ {
+    ______________________
   }
 
-  function draw() {
-    background(255);
-    // Display object
-    fill(0);
-    rect(x, 100, 20, 20);
-
-    // Increment x
-    x = x + 1;
-
-    ______________________________________________
-
-    ______________________________________________
-
-    ______________________________________________
-  }
-  </script>
+  rect(x, y, w, h);
+}
+</script>
