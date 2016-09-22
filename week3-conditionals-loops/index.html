@@ -1,0 +1,106 @@
+---
+layout: default
+permalink: /week3-conditionals-loops/
+---
+    <h1>Quiz 3: Conditionals and Loops</h1>
+
+    <p>1. Consider a grading system where numbers are turned into letters. Fill in the blanks in the following code to complete the boolean expression.</p>
+
+<script type="text/p5" data-preview-width="400">
+var grade = random(0, 100);
+
+if (__________) {
+  text("Grade: A", 10, 50);
+} else if (__________) {
+  println(________________________);
+} else if (__________) {
+  println(________________________);
+} else if (__________) {
+  println(________________________);
+} else {
+  println(________________________);
+}
+</script>
+
+<p>2. Move a rectangle across a window by incrementing a variable. Start the shape at x coordinate 0 and use an if statement to have it stop at coordinate 100. Rewrite the sketch to use <code>constrain()</code> instead of the <code>if</code> statement. Fill in the missing code.</p>
+
+<script type="text/p5" data-preview-width="400">
+// Rectangle starts at location x
+var x = 0;
+
+function setup() {
+  createCanvas(200, 200);
+}
+
+function draw() {
+  background(255);
+  // Display object
+  fill(0);
+  rect(x, 100, 20, 20);
+
+  // Increment x
+  x = x + 1;
+
+  ______________________________________________
+
+  ______________________________________________
+
+  ______________________________________________
+}
+</script>
+
+
+<p>
+  <iframe src="https://alpha.editor.p5js.org/embed/rJdaFwxp" width=200 height=200></iframe>
+  <br/>
+
+  3. Write a program that implements the above rollover. In other words, if the mouse is over a rectangle, the rectangle changes color. Here is some code to get you started. (How might you do this for a circle?)</p>
+
+<script type="text/p5" data-preview-width="400">
+var x = 50;
+var y = 50;
+var w = 100;
+var h = 75;
+
+function setup() {
+  createCanvas(200, 200);
+}
+function draw() {
+  background(255);
+
+  stroke(0);
+
+  if (________ && ________ && ________ && ________) {
+    ______________________
+  } _________ {
+    ______________________
+  }
+
+  rect(x, y, w, h);
+}
+</script>
+
+<p>
+  <iframe src="https://alpha.editor.p5js.org/embed/SkPsHcph" width=320 height=240></iframe>
+</br>
+  Recreate the above sketch so that the squares fade from white to black when the mouse leaves their area. Hint: you need four variables, one for each rectangle’s color.
+</p>
+
+<script type="text/p5" data-preview-width="400">
+</script>
+
+<p>
+  <img src="for_loop.png" width=200 height=200></iframe>
+</br>
+  Recreate the above image with a for loop.
+</p>
+<script type="text/p5" data-preview-width="400">
+</script>
+
+<p>
+  <img src="nested_loop.png" width=200 height=200></iframe>
+</br>
+  Recreate the above image with a nested loop.
+</p>
+<script type="text/p5" data-preview-width="400">
+</script>
