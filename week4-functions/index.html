@@ -6,7 +6,7 @@ permalink: /week4-functions/
     <p>
       <img src="ice_cream_function.png" width=200 height=200></iframe>
     </br>
-      1. Recreate the above image by calling <code>function iceCream()</code> in a nested <code>for</code> loop.
+      1. Recreate the above image by calling <code>function iceCream()</code> in a <code>for</code> loop. The diameter for each ice cream is a random number between 30 to 50.
     </p>
 
 <script type="text/p5" data-preview-width="400">
@@ -16,9 +16,7 @@ function setup() {
   noStroke();
   colorMode(HSB, 255);
   for (________; ________; ________) {
-    for (________; ________; ________) {
-      iceCream(________, ________, ________);
-    }
+    iceCream(________, ________, ________);
   }
 } 
 
@@ -31,33 +29,24 @@ function iceCream(x, y, diameter) {
 </script>
 
 <p>
-  <iframe src="https://alpha.editor.p5js.org/embed/SJDcrKd6" width=250 height=200></iframe>
+  <iframe src="https://alpha.editor.p5js.org/embed/ryYhdPYp" width=250 height=200></iframe>
   <br/>
 
-  2. Write a program that implements the above sketch. Complete function <code>CtoF()</code> that takes temperature in degree Celsius (°C) as an arguement, and returns temperature in degree Fahrenheit (°F). T(°F) = T(°C) × 1.8 + 32. (Since the p5 widget below doesn't support p5.dom yet, so <code>creatInput</code> won't work, please copy the code below and play with it in other ediors.)</p>
+  2. Write a program that implements the above sketch. Complete function <code>CtoF()</code> that takes temperature in degree Celsius (°C) as an arguement, and returns temperature in degree Fahrenheit (°F). T(°F) = T(°C) × 1.8 + 32.</p>
 
 <script type="text/p5" data-preview-width="400">
 function setup() { 
   createCanvas(200, 200);
   background(255);
-  var inputTemp = createInput('');
-  inputTemp.input(myInputEvent);
-  select('input').position(105, 36);
-  text('Temperature in °C: ', 0, 50);
+  text('Temperature in °C: 25', 0, 50);
   text('Temperature in °F: ', 0, 100);
+  var temp = CtoF(25);
+  text(temp, width/2, 100);
 } 
 
 function CtoF(________) { 
   var ________ = ________________________;
   return ________;
-}
-
-function myInputEvent() {
-  background(255);
-  text('Temperature in °C: ', 0, 50);
-  text('Temperature in °F: ', 0, 100);
-  var a = CtoF(this.value());
-  text(a, width/2, 100);
 }
 </script>
 
