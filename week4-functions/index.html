@@ -6,11 +6,11 @@ permalink: /week4-functions/
     <p>
       <img src="ice_cream_function.png" width=200 height=200></iframe>
     </br>
-      1. Recreate the above image by calling <code>function iceCream()</code> in a <code>for</code> loop. The diameter for each ice cream is a random number between 30 to 50.
+    1. Recreate the above image by calling the function <code> iceCream()</code> in a <code>for</code> loop. Use a random diameter for each call to <code>iceCream()</code>.
     </p>
 
 <script type="text/p5" data-preview-width="400">
-function setup() { 
+function setup() {
   createCanvas(200, 200);
   background(255);
   noStroke();
@@ -18,7 +18,7 @@ function setup() {
   for (________; ________; ________) {
     iceCream(________, ________, ________);
   }
-} 
+}
 
 function iceCream(x, y, diameter) {
   fill(random(360), 112, 331);
@@ -32,19 +32,18 @@ function iceCream(x, y, diameter) {
   <iframe src="https://alpha.editor.p5js.org/embed/ryYhdPYp" width=250 height=200></iframe>
   <br/>
 
-  2. Write a program that implements the above sketch. Complete function <code>CtoF()</code> that takes temperature in degree Celsius (°C) as an arguement, and returns temperature in degree Fahrenheit (°F). T(°F) = T(°C) × 1.8 + 32.</p>
+  2. Write a program that implements the above sketch. Complete function <code>CtoF()</code> that receives a temperature in Celsius (°C) as an arguement, and returns the temperture back Fahrenheit (°F). The forumula is F° = (C° × 1.8) + 32.</p>
 
 <script type="text/p5" data-preview-width="400">
-function setup() { 
+function setup() {
   createCanvas(200, 200);
   background(255);
   text('Temperature in °C: 25', 0, 50);
-  text('Temperature in °F: ', 0, 100);
   var temp = CtoF(25);
-  text(temp, width/2, 100);
-} 
+  text('Temperature in °F: ' + temp, 0, 100);
+}
 
-function CtoF(________) { 
+function CtoF(________) {
   var ________ = ________________________;
   return ________;
 }
@@ -55,7 +54,7 @@ function CtoF(________) {
   <iframe src="https://alpha.editor.p5js.org/embed/rkp0vcu6" width=200 height=200></iframe>
   <br/>
 
-  3. ReWrite the bouncing ball program above. Define an object call <code>ball</code>, which not only has keys like <code>x</code>, <code>y</code>, <code>xspeed</code>, <code>yspeed</code>, but also has <code>dispaly()</code>, <code>move()</code> and <code>bouncing()</code> functions. Don't forget to use <code>this.x</code> to reference the x when you declare functions in the <code>ball</code> object. </p>
+  3. Rewrite the bouncing ball sketch below to use functions inside an object. The code provided has an object called <code>ball</code> with properties <code>x</code>, <code>y</code>, <code>xspeed</code>, <code>yspeed</code>. Try adding moving <code>display()</code>, <code>move()</code> and <code>bounce()</code> into the object itself. Don't forget to use <code>this.___</code> to reference the the object's properties inside its functions and call the functions on the object like <code>ball.display()</code>.</p>
 
 <script type="text/p5" data-preview-width="400">
 var ball = {
@@ -87,7 +86,7 @@ function move() {
   ball.y += ball.yspeed;
 }
 
-function bouncing() {
+function bounce() {
   if (ball.x > width - r || ball.x < r) {
     ball.xspeed = -ball.xspeed;
   }
