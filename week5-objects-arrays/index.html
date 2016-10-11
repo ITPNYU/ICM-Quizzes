@@ -88,42 +88,41 @@ function setup() {
   <iframe src="https://alpha.editor.p5js.org/embed/HkrRhEcR" width=200 height=200></iframe>
   <br/>
 
-  3. Write a program that implements the above sketch. Use an array called <code>bubbles</code> and a for loop to store and get access to each bubble object.</p>
+  3. Write a program that implements the above sketch. Step 1: create a constructor function, and make a single bubble object with the constructor function.</p>
 
 <script type="text/p5" data-preview-width="400">
-var bubbles = [];
-
 function setup() {
   createCanvas(200, 200);
-  for (___________________) {
-    bubbles[____] = {
-      x: random(0, width),
-      y: random(0, height),
-      display: function() {
-        stroke(255);
-        noFill();
-        ellipse(this.x, this.y, 24, 24);
-      },
-      move: function() {
-        this.x = this.x + random(-1, 1);
-        this.y = this.y + random(-1, 1);
-      }
-    };
-  }
+  var bubble = ___ Bubble();
 }
 
 function draw() {
   background(0);
-  for (___________________) {
-    bubbles[____].move();
-    bubbles[____].display();
+  bubble.move();
+  bubble.display();
+}
+
+function Bubble() {
+  ____.x = random(0, width);
+  ____.____ = _____________;
+
+  ____.display = function() {
+    stroke(255);
+    noFill();
+    ellipse(this.x, this.y, 24, 24);
+  }
+
+  ____.move = function() {
+    this.x = this.x + random(-1, 1);
+    this.y = this.y + random(-1, 1);
+
   }
 }
 </script>
 
 
 <p>
-  Recreate the same sketch from question 3. But write a constructor function to create bubble objects this time. Then try to create 100 bubble objects.</p>
+  Step 2: Use a <code>for</code> loop to create an array of bubble objects with the constructor function you created. Then try to create 100 bubble objects.</p>
 
 <script type="text/p5" data-preview-width="400">
 var bubbles = [];
