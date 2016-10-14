@@ -1,0 +1,193 @@
+---
+layout: default
+permalink: /week7-dom/
+---
+<h2>Quiz 7 DOM: events and callback function</h2>
+
+<h4>Please copy and paste the code to the <a href="http://alpha.editor.p5js.org/">p5 web editor</a> to do the following questions.</h4>
+<p>
+  <iframe src="http://alpha.editor.p5js.org/embed/rym0wT6R" width=200 height=200></iframe>
+  <br/>
+
+  1. Write a program that implements the above sketch. First, create a <code>p</code> element. Then use <code>.positon()</code> function to update the element's x, y positon. Then use <code>.html</code> function to update its content. In the end, use <code>.style</code> function to change its background color and add paddings to the element.
+</p>
+
+<script type="text/p5" data-preview-width="400">
+// Please copy and paste the code to the p5 web editor to do the following questions.
+var p;
+var x = 50;
+var y = 50;
+
+function setup() {
+  // create a p element.
+  p = __________('p', 'Waiting.');  
+}
+
+function draw() {
+  // set element p's x, y position
+  p._______(x, y);
+  
+  // update element p's x, y position
+  x = x + Math.round(random(-1, 1));
+  y = y + Math.round(random(-1, 1));
+  
+  // update element p's content
+  p.________('x: ' + x + '<br />y: ' + y );
+  
+  // change element p's background color
+  p.________('________', '________');
+  
+  // add paddings to element p
+  p.________('________', '________');
+}
+</script>
+
+<p>
+  <iframe src="https://alpha.editor.p5js.org/embed/rJLDPApA" width=200 height=270></iframe>
+  <br/>
+
+  2. Write a program that implements the above sketch. Create a <code>button</code> element. Attach a callback function to the button's <code>mousePressed</code> event. In the callback function, give the canvas a random background color. Similarlly, create an <code>input</code> element to update some text on the canvas, and create a <code>slider</code> element to control the size of an ellipse.</p>
+
+<script type="text/p5" data-preview-width="400">
+// Please copy and paste the code to the p5 web editor to do the following questions.
+var bgcolor;
+var button;
+var slider;
+var nameInput;
+var nameP;
+
+function setup() {
+  canvas = createCanvas(200, 200);
+  bgcolor = color(200);
+  
+  // Create a button element
+  button = ________("___________");
+  // Attach a callback function called changeColor to the button's mousePressed event
+  button.________(________);
+  
+  // Create a slider element
+  slider = ________(____, ____, ____);
+
+  // Create an input element
+  nameInput = ________('________');
+  // Attach a callback function called updateText to the input's changed event
+  nameInput.________(________);
+  
+  // Create a p element
+  nameP = ________('Your name!'); 
+  // Attach a callback function called overpara to the p's mouseOver event
+  nameP.________(________);
+  // Attach a callback function called outpara to the p's mouseOut event
+  nameP.________(________);
+}
+
+// Callback function for the button's mousePressed event
+function changeColor() {
+  bgcolor = color(random(150, 255), random(150, 255), random(150, 255));
+}
+
+// Callback function for the input's changed event
+function updateText() {
+  nameP.html(nameInput.value());
+}
+
+// Callback function for the nameP's mouseOver event
+function overpara() {
+  nameP.html('your moues is over me');
+}
+
+// Callback function for the nameP's mouseOut event
+function outpara() {
+  nameP.html('your mouse is out');
+}
+
+function draw() {
+  background(bgcolor);
+
+  text(nameInput.value(), 10, 20);
+
+  noStroke(); 
+  fill(255, 50, 150);
+  // Draw an ellipse according to slider's value
+  ellipse(100, 100, ________, ________);
+}
+</script>
+
+
+<p>
+  <iframe src="https://alpha.editor.p5js.org/embed/B1fWdyCA" width=200 height=200></iframe>
+  <br/>
+
+  3. Write a program that implements the above sketch. Create multiple <code>p</code> elements. Manipulate their x, y positions. Attach callback functions to their <code>mouseOver</code> and <code>mouseOut</code> events. In the callback functions, remember to use "this" to reference the current element.</p>
+
+<script type="text/p5" data-preview-width="400">
+// Please copy and paste the code to the p5 web editor to do the following questions.
+var paragraphs;
+
+function setup() {  
+  for (var i = 0; i < 5; i++) {
+    for (var j = 0; j < 4; j++) {
+      // Create p element
+      var par = ________('😂');
+      // Set element's x, y position
+      par.________(10 + i*40, 10 + j*40);
+    }
+  }
+
+  // Select All p element
+  paragraphs = ________('____');
+  
+  for (var i = 0; i < paragraphs.length; i++) {
+    // Attach a callback function called hightlight to the element's mouseOver event
+    paragraphs[____].________(________);
+
+    // Attach a callback function called unhightlight to the element's mouseOut event
+    paragraphs[____].________(________);
+  }
+}
+
+function highlight() {
+  // remember to use "this" to reference the current element
+  // change the element's style
+  // change the element's font size
+  this.________('________', '________');
+  // change the element's background color
+  this.________('________', 'lightblue');
+}
+
+function unhighlight() {
+  this.style('font-size', '12pt');
+  this.style('background-color', 'white');
+}
+</script>
+
+
+<p>
+  <iframe src="https://alpha.editor.p5js.org/embed/ByJqkeRC" width=250 height=200></iframe>
+  <br/>
+
+  4. Write a program that implements the above sketch. In the index.html file, include a <code>h1</code> tag with 'A Todo List' as content, and an <code>ol</code> with id="todolist" in the <code>body</code> tag. Create a <code>button</code> element. Attach a callback function called <code>addItem</code> to its <code>mousePressed</code> event. In the callback function, add one <code>li</code> as a child element to the <code>ol</code> element by using <code>.parent</code> function.</p>
+
+<script type="text/p5" data-preview-width="400">
+// Please copy and paste the code to the p5 web editor to do the following questions.
+var itemInput;
+var button;
+
+function setup() {
+  noCanvas();
+  // Create an input element
+  itemInput = ________('Type a todo item here');
+
+  // Create a button element
+  button = ________('Add one todo');
+  //Attach a callback function to its mousePressed event
+  button.________(addItem);  
+}
+
+function addItem() {
+  // Create an li element
+  var li = __________('____', itemInput.value());
+  // set li's parent to an element with id "todolist"
+  li.________("todolist");
+}
+</script>
