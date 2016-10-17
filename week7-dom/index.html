@@ -25,116 +25,25 @@ permalink: /week7-dom/
   <br/>
   Sketch 1: Create a <code>button</code> element. Attach a callback function to the button's <code>mousePressed</code> event. In the callback function, give the canvas a random background color.</p>
 
-<script type="text/p5" data-preview-width="400">
-// Please copy and paste the code to the p5 web editor to do the following questions.
-var bgcolor;
-var button;
-
-function setup() {
-  canvas = createCanvas(200, 200);
-  bgcolor = color(200);
-  
-  // Create a button element
-  button = ________("___________");
-  // Attach a callback function called changeColor to the button's mousePressed event
-  button.________(________);
-}
-
-// Callback function for the button's mousePressed event
-function changeColor() {
-  bgcolor = color(random(150, 255), random(150, 255), random(150, 255));
-}
-
-function draw() {
-  background(bgcolor);
-}
-</script>
+<script src="https://gist.github.com/shiffman/650a2856ed037348fc42d08865d07507.js"></script>
 
 <p>
   <br/>
   Sketch 2: Create a <code>slider</code> element to control the size of an ellipse.</p>
 
-<script type="text/p5" data-preview-width="400">
-// Please copy and paste the code to the p5 web editor to do the following questions.
-var slider;
-
-function setup() {
-  canvas = createCanvas(200, 200);
-  bgcolor = color(200);
-  
-  // Create a slider element
-  slider = ________(____, ____, ____);
-}
-
-function draw() {
-  background(200);
-  noStroke(); 
-  fill(255, 50, 150);
-
-  // Draw an ellipse according to the slider's value
-  ellipse(100, 100, ________.________(), ________.________());
-}
-</script>
+<script src="https://gist.github.com/shiffman/c1602bb46801204c74c7971c8ab2cafe.js"></script>
 
 <p>
   <br/>
   Sketch 3: Create an <code>input</code> and a <code>p</code> element. Attach a callback function to the input element's <code>input</code> event. In the callback function, update p element's content. See reference about <code>input</code> event <a href='https://p5js.org/reference/#/p5.Element/input'>here</a>.</p>
 
-<script type="text/p5" data-preview-width="400">
-// Please copy and paste the code to the p5 web editor to do the following questions.
-var nameInput;
-var nameP;
-
-function setup() {
-  noCanvas();
-  
-  // Create a p element
-  nameP = _________('Your name!');
-  
-  // Create an input element
-  nameInput = ________('type your name');
-
-  // Attach a callback function called updateText to the input's input event
-  nameInput.________(________);
-}
-
-function updateText() {
-  // change p element's html content
-  nameP.________(________.________());
-}
-</script>
+<script src="https://gist.github.com/shiffman/c143d3e8f4ff96d1c3bf4f4a07baeb33.js"></script>
 
 <p>
   <br/>
   Sketch 4: Create a <code>p</code> element. Attach two callback functions to the p element's <code>mouseOver</code> and <code>mouseOut</code> event. In the callback functions, update p element's content.</p>
 
-<script type="text/p5" data-preview-width="400">
-// Please copy and paste the code to the p5 web editor to do the following questions.
-var nameP;
-
-function setup() {
-  noCanvas();
-  
-  // Create a p element
-  nameP = ________('Move your mouse here');
-
-  // Attach a callback function called overpara to the p element's mouseOver event
-  nameP.________(________);
-
-  // Attach a callback function called outpara to the p element's mouseOut event
-  nameP.________(________);
-}
-
-function overpara() {
-  // change p element's html content
-  nameP.________('your mouse is over me');
-}
-
-function outpara() {
-  // change p element's html content
-  nameP.________('your mouse is out');
-}
-</script>
+<script src="https://gist.github.com/shiffman/7215489be5b4a1d32cd9175a6e011e21.js"></script>
 
 <p>
   <br/>
@@ -144,36 +53,7 @@ function outpara() {
   Write a program that implements the above sketch. In the index.html file, write a p element with an id = "apple". Then select the element and update this element's x position in the sketch.js file.
 </p>
 
-<script type="text/p5" data-preview-width="400">
-// Please copy and paste the code to the p5 web editor to do the following questions.
-// Please include the following code in the body element in the index.html file
-// <p id="apple">This is an apple.</p>
-
-// Code in the sketch.js file
-var apple;
-var x = 0;
-
-function setup() {
-  noCanvas();
-
-  // select an element with an id called "apple".
-  apple = ________("#________");
-}
-
-function draw() {
-  // update apple's x position
-  apple.________(x, 80);
-  updateX();
-}
-
-function updateX() {
-  x++;
-  if (x > 150) {
-    x = 0;
-  }
-}
-</script>
-
+<script src="https://gist.github.com/shiffman/090e80bc732ded7378f1c21c175be4da.js"></script>
 
 <p>
   <br/>
@@ -182,35 +62,7 @@ function updateX() {
 
   4. Write a program that implements the above sketch. In the index.html file, include a <code>h1</code> tag with 'A Todo List' as content, and an <code>ol</code> with id = "todolist" in the <code>body</code> tag. Create a <code>button</code> element. Attach a callback function called <code>addItem</code> to its <code>mousePressed</code> event. In the callback function, add one <code>li</code> as a child element to the <code>ol</code> element by using <code>.parent</code> function.</p>
 
-<script type="text/p5" data-preview-width="400">
-// Please copy and paste the code to the p5 web editor to do the following questions.
-// Please include the following code in the body element in the index.html file
-// <h1>A Todo List</h1>
-//   <ol id="todolist"></ol>
-
-// Code in the sketch.js file
-var itemInput;
-var button;
-
-function setup() {
-  noCanvas();
-  // Create an input element
-  itemInput = ________('Type a todo item here');
-
-  // Create a button element
-  button = ________('Add one todo');
-  //Attach a callback function to its mousePressed event
-  button.________(addItem);  
-}
-
-function addItem() {
-  // Create an li element
-  var li = __________('____', itemInput.value());
-  // set li's parent to an element with id "todolist"
-  li.________("todolist");
-}
-</script>
-
+<script src="https://gist.github.com/shiffman/9106d4b5b44c8d668f9cfbb02a1dbe8d.js"></script>
 
 <p>
   <br/>
@@ -219,42 +71,4 @@ function addItem() {
 
   5. Write a program that implements the above sketch. Create multiple <code>p</code> elements. Manipulate their x, y positions. Attach callback functions to their <code>mouseOver</code> and <code>mouseOut</code> events. In the callback functions, remember to use "this" to reference the current element.</p>
 
-<script type="text/p5" data-preview-width="400">
-// Please copy and paste the code to the p5 web editor to do the following questions.
-var paragraphs = [];
-
-function setup() {  
-  for (var i = 0; i < 5; i++) {
-    for (var j = 0; j < 4; j++) {
-      // Create p element
-      var par = ________('😂');
-      // Set element's x, y position
-      par.________(10 + i*40, 10 + j*40);
-      // push one element into the array
-      paragraphs.push(par);
-    }
-  }
-  
-  for (var n = 0; n < paragraphs.length; n++) {
-    // Attach a callback function called hightlight to the element's mouseOver event
-    paragraphs[____].________(________);
-
-    // Attach a callback function called unhightlight to the element's mouseOut event
-    paragraphs[____].________(________);
-  }
-}
-
-function highlight() {
-  // remember to use "this" to reference the current element
-  // change the element's style
-  // change the element's font size
-  this.________('________', '________');
-  // change the element's background color
-  this.________('________', 'lightblue');
-}
-
-function unhighlight() {
-  this.style('font-size', '12pt');
-  this.style('background-color', 'white');
-}
-</script>
+<script src="https://gist.github.com/shiffman/33bd52b7964d6de4278279f78bd812ab.js"></script>
