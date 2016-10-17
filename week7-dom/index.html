@@ -6,89 +6,80 @@ permalink: /week7-dom/
 
 <h4>Please copy and paste the code to the <a href="https://alpha.editor.p5js.org/">p5 web editor</a> to do the following questions.</h4>
 
+<hr>
+
 <p>
+  1. Write the code to implement the sketch below. First, create a <code>p</code> element. Then use the <code>position()</code> function to update the element's xy position. Then use <code>html()</code> to update its content. Finally, use <code>style()</code> to change its background color and add padding.
+
+  <br/><br/>
   <iframe src="https://alpha.editor.p5js.org/embed/rym0wT6R" width=200 height=200></iframe>
   <br/>
 
-  1. Write the code to implement the above sketch. First, create a <code>p</code> element. Then use the <code>position()</code> function to update the element's xy position. Then use <code>html()</code> to update its content. Finally, use <code>style()</code> to change its background color and add padding.
   <script src="https://gist.github.com/shiffman/387e3a4882427099a112b69b9be261cd.js"></script>
 </p>
-
 <hr>
-
 <p>
-  <br/>
+  2: Create a <code>button</code> element. Attach a callback function to the button's <code>mousePressed()</code> event. In the callback function, set a random background color.
+  <br/><br/>
   <iframe src="https://alpha.editor.p5js.org/embed/S1a4BhAR" width=200 height=230></iframe>
   <br/>
-  2: Create a <code>button</code> element. Attach a callback function to the button's <code>mousePressed()</code> event. In the callback function, set a random background color.
 
 <script src="https://gist.github.com/shiffman/650a2856ed037348fc42d08865d07507.js"></script>
 </p>
-
 <hr>
-
 <p>
-  <br/>
+  3: Create a <code>slider</code> element that controls the size of an ellipse.
+  <br/><br/>
   <iframe src="https://alpha.editor.p5js.org/embed/rJLDPApA" width=200 height=230></iframe>
   <br/>
-  3: Create a <code>slider</code> element that controls the size of an ellipse.
 
 <script src="https://gist.github.com/shiffman/c1602bb46801204c74c7971c8ab2cafe.js"></script>
 </p>
-
 <hr>
 
 <p>
-  <br/>
+  4: Create an <code>input</code> and a <code>p</code> element. Attach a callback function to the input element's <code>input()</code> event. In the callback function, update <code>p</code> element's content. See <a href='https://p5js.org/reference/#/p5.Element/input'><code>input</code> event reference</a> for more.
+  <br/><br/>
   <iframe src="https://alpha.editor.p5js.org/embed/rJ-g24lJe" width=200 height=200></iframe>
   <br/>
-  4: Create an <code>input</code> and a <code>p</code> element. Attach a callback function to the input element's <code>input()</code> event. In the callback function, update <code>p</code> element's content. See <a href='https://p5js.org/reference/#/p5.Element/input'><code>input</code> event reference</a> for more.
 
 <script src="https://gist.github.com/shiffman/c143d3e8f4ff96d1c3bf4f4a07baeb33.js"></script>
 </p>
-
 <hr>
-
 <p>
-  <br/>
+  5: Create a <code>p</code> element. Attach callbacks to the <code>p</code> element's <code>mouseOver()</code> and <code>mouseOut()</code> events. In the callback functions, update <code>p</code> element's content.
+  <br/><br/>
   <iframe src="https://alpha.editor.p5js.org/embed/ryml3Nekx" width=200 height=200></iframe>
   <br/>
-  5: Create a <code>p</code> element. Attach callbacks to the <code>p</code> element's <code>mouseOver()</code> and <code>mouseOut()</code> events. In the callback functions, update <code>p</code> element's content.
 
 <script src="https://gist.github.com/shiffman/7215489be5b4a1d32cd9175a6e011e21.js"></script>
 </p>
-
 <hr>
-
 <p>
-  <br/>
+  6. Instead of making a paragraph element with <code>createP()</code>, you can also use <code>select()</code> to access existing elements written in the html file.  Write the code for the above sketch. Write a <code>p</code> element in <code>index.html></code> with the id "apple."  Use <code>select()</code> to access the element and update its x position <code>sketch.js</code>.
+  <br/><br/>
   <iframe src="https://alpha.editor.p5js.org/embed/H1pGh200" width=290 height=200></iframe>
   <br/>
-  6. Instead of making a paragraph element with <code>createP()</code>, you can also use <code>select()</code> to access existing elements written in the html file.  Write the code for the above sketch. Write a <code>p</code> element in <code>index.html></code> with the id "apple."  Use <code>select()</code> to access the element and update its x position <code>sketch.js</code>.
 
 <script src="https://gist.github.com/shiffman/090e80bc732ded7378f1c21c175be4da.js"></script>
 </p>
-
 <hr>
-
 <p>
-  <br/>
+
+  7. Write the code for the above sketch. In <code>index.html</code>, write an <code>h1</code> element with the text 'A To-Do List' and a <code>ol</code> element with the <code>id</code> "todolist."  Create a <code>button</code> element. Attach a callback named <code>addItem</code> to the button's <code>mousePressed()</code> event.  In <code>addItem()</code>, add one <code>li</code> element as a child to the <code>ol</code> element by using <code>parent()</code>.
+  <br/><br/>
   <iframe src="https://alpha.editor.p5js.org/embed/ByJqkeRC" width=250 height=200></iframe>
   <br/>
-  
-  7. Write the code for the above sketch. In <code>index.html</code>, write an <code>h1</code> element with the text 'A To-Do List' and a <code>ol</code> element with the <code>id</code> "todolist."  Create a <code>button</code> element. Attach a callback named <code>addItem</code> to the button's <code>mousePressed()</code> event.  In <code>addItem()</code>, add one <code>li</code> element as a child to the <code>ol</code> element by using <code>parent()</code>.
 
 <script src="https://gist.github.com/shiffman/9106d4b5b44c8d668f9cfbb02a1dbe8d.js"></script>
 </p>
-
 <hr>
-
 <p>
-  <br/>
-  <iframe src="https://alpha.editor.p5js.org/embed/B1fWdyCA" width=200 height=200></iframe>
-  <br/>
 
   8. Write a program that implements the above sketch. Create multiple <code>p</code> elements and set their x,y positions in a grid. Attach callback functions to each element's <code>mouseOver()</code> and <code>mouseOut()</code> events. In the callback functions, remember to use <code>this</code> to reference specific element that triggered the event.
+  <br/><br/>
+  <iframe src="https://alpha.editor.p5js.org/embed/B1fWdyCA" width=200 height=200></iframe>
+  <br/>
 
 <script src="https://gist.github.com/shiffman/33bd52b7964d6de4278279f78bd812ab.js"></script>
   </p>
