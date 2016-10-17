@@ -12,37 +12,7 @@ permalink: /week7-dom/
   1. Write a program that implements the above sketch. First, create a <code>p</code> element. Then use <code>.position()</code> function to update the element's x, y position. Then use <code>.html</code> function to update its content. In the end, use <code>.style</code> function to change its background color and add paddings to the element.
 </p>
 
-<script type="text/p5" data-preview-width="400">
-// Please copy and paste the code to the p5 web editor to do the following questions.
-var p;
-var x = 50;
-var y = 50;
-
-function setup() {
-  // create a p element.
-  p = __________('Waiting.');  
-}
-
-function draw() {
-  // set element p's x, y position
-  p._______(x, y);
-  
-  // update element p's x, y position
-  x = x + Math.round(random(-1, 1));
-
-  y = y + Math.round(random(-1, 1));
-  
-  // update element p's content
-  p.________('x: ' + x + '<br />y: ' + y );
-  
-  // change element p's background color
-  p.________('________', '________');
-  
-  // add paddings to element p
-  p.________('________', '________');
-}
-</script>
-
+<script src="https://gist.github.com/shiffman/387e3a4882427099a112b69b9be261cd.js"></script>
 <p>
   <br/>
   <iframe src="https://alpha.editor.p5js.org/embed/S1a4BhAR" width=200 height=230></iframe>
