@@ -102,17 +102,19 @@ function draw() {
   bubble.display();
 }
 
-function Bubble() {
+class Bubble {
+
+  _________() {
   ____.x = random(0, width);
   ____.____ = _____________;
 
-  ____.display = function() {
+  display() {
     stroke(255);
     noFill();
     ellipse(this.x, this.y, 24, 24);
   }
 
-  ____.move = function() {
+  _________() {
     this.x = this.x + random(-1, 1);
     this.y = this.y + random(-1, 1);
 
@@ -142,17 +144,19 @@ function draw() {
   }
 }
 
-function Bubble() {
+class Bubble {
+
+  _________() {
   ____.x = random(0, width);
   ____.____ = _____________;
 
-  ____.display = function() {
+  display() {
     stroke(255);
     noFill();
     ellipse(this.x, this.y, 24, 24);
   }
 
-  ____.move = function() {
+  _________() {
     this.x = this.x + random(-1, 1);
     this.y = this.y + random(-1, 1);
 
@@ -193,21 +197,22 @@ function draw() {
   }
 }
 
-function Bubble(x, y) {
-  this.x = x;
-  this.y = y;
+class Bubble {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
 
-  this.display = function() {
+  display() {
     stroke(255);
     fill(255, 0, 150, 50);
     ellipse(this.x, this.y, 24, 24);
-  };
+  }
 
-  this.move = function() {
+  move() {
     this.x = this.x + random(-1, 1);
     this.y = this.y + random(-1, 1);
-
-  };
+  }
 }
 </script>
 
@@ -245,28 +250,30 @@ function draw() {
 }
 
 
-function Bubble(x, y) {
-  this.x = x;
-  this.y = y;
-  this.col = color(255, 100);
+class Bubble {
+  constructor (x, y) {
+    this.x = x;
+    this.y = y;
+    this.col = color(255, 100);
+  }
 
-  this.display = function() {
+  display() {
     stroke(255);
     fill(this.col);
     ellipse(this.x, this.y, 30, 30);
-  };
+  }
 
-  this.move = function() {
+  move() {
     this.x = this.x + random(-1, 1);
     this.y = this.y + random(-1, 1);
 
-  };
-  this.clicked = function() {
+  }
+  
+  clicked() {
     var d = ____(mouseX, mouseY, ____.____, ____.____);
     if (d < ____) {
       this.col = color(0, random(255), random(100, 255));
     }
-  };
-
+  }
 }
 </script>
